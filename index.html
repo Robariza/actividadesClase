@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Robinson Ariza">
+    <meta name="keyboard" content="libros, librerias">
+    <meta name="description" content="pagina informativa sobre libros">
+
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
+
+    <!-- link a los iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Libros</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- inicio del encabezado -->
+
+        <!-- menú de navegación -->
+        <nav>
+            <!-- siempre son listas 
+            -listas ordenadas -> ol (order list)
+            -listas desordenadas -> ul (unorden list)  
+
+            cada lista tiene  sue elemento etiqueta  -> li (list item)
+        -->
+
+            <!-- <ol>
+            <li>Elemento1: ordenada</li>
+            <li>Elemento2: ordenada</li>
+            <li>Elemento3: ordenada</li>
+        </ol> -->
+
+            <!-- etiqueta de separación -->
+            <hr>
+            <!-- a -> equiteta para redirecionar a un sitio web -->
+            <!-- img -> etiqueta para imagenes 
+            li -> item lista -->
+            <ul>
+                <li> <a href="#">Seccion1 </a> </li>
+                <li> <a href="#">Seccion2 </a> </li>
+                <li> <a href="./index.html">
+                        <!-- src -> source -> fuente 
+                    ruta de la imagen
+                    
+                    alt -> texto descriptivo de la imagen ->
+                    texto alternativo -> influye en el seo
+                    -->
+                        <img src="./assets/logo.jpg" alt="logo">
+                    </a>
+                </li>
+                <li> <a href="#">Seccion4 </a> </li>
+                <li> <a href="#">Seccion5 </a> </li>
+            </ul>
+
+        </nav>
+        <!-- seccion banner -->
+        <section>
+            <img src="./assets/banner.jpg" alt="bane-libros">
+        </section>
+    </header>
+    <!-- inicio del contenido de la pagina -->
+    <main>
+
+        <!-- seccion informativa 1 -->
+        <section>
+            <!-- section -> divide mi sitio en 
+                tematicas generales de contenido -->
+
+            <!-- etiquetas  para los titulos -> h
+
+            h1 -> el titulo principal -> solo debe haber uno 
+            h2 -> titulos de las secciones de contenido 
+            h3, h6 -> subtitulos 
+            p -> parrafos 
+            -->
+            <h1>Titulo principal</h1>
+            <!-- lorem -> texto falso -->
+            <div>
+                <!-- iframe -> nos permite usar elementos como videos o mapas de otros sitios web -->
+                <!-- 
+                    las etiquetas no semanticas se usan para css
+                    etiqueta div (no semantico)-> contenedor de elementos 
+                span -> hacer modificaciones especificas
+                -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4pCwXywTzKE?si=LTUx-I7d29X4Ygaq"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam deserunt facere officiis nulla. Ipsa
+                incidunt, optio facilis a blanditiis voluptatum quae pariatur voluptatibus, quisquam illo omnis
+                fugit labore veritatis nostrum?
+                Eveniet officia voluptates aspernatur aliquid. Illo, nobis excepturi tempore dicta inventore
+                molestias corporis. Sequi in, tempore necessitatibus dolores maxime sint eius aperiam ad cum,
+                temporibus ab officiis amet, quis fugiat?
+                Eos delectus quibusdam obcaecati tempore sit perferendis, neque totam odit doloremque dolores!
+                Nesciunt exercitationem nam nobis eaque, non quasi commodi officia rerum reiciendis tenetur
+                quibusdam iste ad nisi aut sequi.
+                Debitis quam dolor delectus cupiditate aliquam fugit unde mollitia, in commodi esse corrupti dicta,
+                iusto praesentium necessitatibus, saepe recusandae eius neque ex consectetur voluptates aut aliquid
+                incidunt expedita omnis! Possimus.</p>
+
+        </section>
+
+        <!-- seccion informativa2 -->
+
+        <section>
+            <h2>el titulo de mi seccion</h2>
+
+            <div>
+                <img src="./assets/img.jpg" alt="">
+                <img src="./assets/img.jpg" alt="">
+                <img src="./assets/img.jpg" alt="">
+                <img src="./assets/img.jpg" alt="">
+                <img src="./assets/img.jpg" alt="">
+                <img src="./assets/img.jpg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- inicio del pie de pagina -->
+        <!-- division de contenido -->
+        <div>
+            <h3>contactos</h3>
+            <ol>
+                <li>telefono</li>
+                <li>red social</li>
+                <li>correo </li>
+            </ol>
+        </div>
+        <!-- division de logo -->
+        <div>
+            <img src="./assets/logo.jpg" alt="logo">
+        </div>
+        
+        <!-- division de redes sociales -->
+        <article>
+            <h3>redes sociales</h3>
+            <div>
+                <!-- librerias ->
+                i -> etiqueta de icono para html
+                -->
+                <a href="https://www.facebook.com/?locale=es_LA"> <i class="bi bi-facebook"></i> </a>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-whatsapp"></i>
+            </div>
+        </article>
+
+    </footer>
+</body>
+
+</html>

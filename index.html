@@ -7,7 +7,7 @@
     <meta name="author" content="Robinson Ariza">
     <meta name="keyboard" content="libros, librerias">
     <meta name="description" content="pagina informativa sobre libros">
-
+    <!-- link a los estilos    -->
     <link rel="stylesheet" href="./styles/index.css">
 
     <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
@@ -24,7 +24,7 @@
         <!-- inicio del encabezado -->
 
         <!-- menú de navegación -->
-        <nav>
+        <nav class="menuNav">
             <!-- siempre son listas 
             -listas ordenadas -> ol (order list)
             -listas desordenadas -> ul (unorden list)  
@@ -43,7 +43,7 @@
             <!-- a -> equiteta para redirecionar a un sitio web -->
             <!-- img -> etiqueta para imagenes 
             li -> item lista -->
-            <ul>
+            <ul class="listaMenu">
                 <li> <a href="#">Seccion1 </a> </li>
                 <li> <a href="#">Seccion2 </a> </li>
                 <li> <a href="./index.html">
@@ -53,7 +53,8 @@
                     alt -> texto descriptivo de la imagen ->
                     texto alternativo -> influye en el seo
                     -->
-                        <img src="./assets/logo.jpg" alt="logo">
+                        <img class="logo"
+                         src="./assets/logo.jpg" alt="logo">
                     </a>
                 </li>
                 <li> <a href="#">Seccion4 </a> </li>
@@ -62,15 +63,16 @@
 
         </nav>
         <!-- seccion banner -->
-        <section>
+        <section class="banner">
             <img src="./assets/banner.jpg" alt="bane-libros">
         </section>
     </header>
+    
     <!-- inicio del contenido de la pagina -->
     <main>
 
         <!-- seccion informativa 1 -->
-        <section>
+        <section class="Seccion1">
             <!-- section -> divide mi sitio en 
                 tematicas generales de contenido -->
 
@@ -81,9 +83,9 @@
             h3, h6 -> subtitulos 
             p -> parrafos 
             -->
-            <h1>Titulo principal</h1>
+            <h1 class="Titulo">Titulo principal</h1>
             <!-- lorem -> texto falso -->
-            <div>
+            <div class="divVideo">
                 <!-- iframe -> nos permite usar elementos como videos o mapas de otros sitios web -->
                 <!-- 
                     las etiquetas no semanticas se usan para css
@@ -94,7 +96,7 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam deserunt facere officiis nulla. Ipsa
                 incidunt, optio facilis a blanditiis voluptatum quae pariatur voluptatibus, quisquam illo omnis
                 fugit labore veritatis nostrum?
@@ -107,15 +109,16 @@
                 Debitis quam dolor delectus cupiditate aliquam fugit unde mollitia, in commodi esse corrupti dicta,
                 iusto praesentium necessitatibus, saepe recusandae eius neque ex consectetur voluptates aut aliquid
                 incidunt expedita omnis! Possimus.</p>
+            </div>
 
         </section>
 
         <!-- seccion informativa2 -->
 
-        <section>
-            <h2>el titulo de mi seccion</h2>
+        <section class="Seccion2">
+            <h2 class="Titulo">el titulo de mi seccion</h2>
 
-            <div>
+            <div class="contenedorImg">
                 <img src="./assets/img.jpg" alt="">
                 <img src="./assets/img.jpg" alt="">
                 <img src="./assets/img.jpg" alt="">
@@ -141,7 +144,7 @@
         <div>
             <img src="./assets/logo.jpg" alt="logo">
         </div>
-        
+
         <!-- division de redes sociales -->
         <article>
             <h3>redes sociales</h3>

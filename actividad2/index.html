@@ -1,0 +1,126 @@
+<!-- IMPORTANCIA EN EL POSICIONAMIENTO SEO -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- METADATOS POSICIONAMIENTO SEO -->
+    <meta name="author" content="Robinson Ariza">
+    <meta name="keyboard" content="practica, loros">
+    <meta name="description" content="actividad practica css - flexbox y grid">
+    <!---------- LINKS ---------->
+    <!-- VINCULACIÓN CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- FAVICON -->
+    <link rel="stylesheet" href="./assets/logo/favicon.png">
+
+    <!-- NOMBRE DEL DOCUMENTO -->
+    <title>Document</title>
+</head>
+
+<body>
+    <!-------------------------- HEADER (encabezado)-------------------------->
+
+    <nav class="menuNav">
+        <!------- LOGO ------->
+
+        <!-- ETIQUETAS NO SEMÁNTICAS (se utilizan principalmente para aplicar estilos)
+        -div
+        -span
+        -->
+        <div class="logo">
+            <!-- REDIRECCIÓN DEL LOGO Y TEXTO -->
+            <a href="#">
+                <img src="./assets/logo/logo.jpg" alt="logo">
+                <!-- Para dar estilo al texto del logo se pueden usar:
+                    -a
+                    -h1 -> si no se repite
+                    -h2
+                    -span
+                 -->
+                <p class="p-logo">looking for<span class="span-logo">freedom</span> </p>
+            </a>
+
+        </div>
+
+        <!------- LISTA -> MENÚ DE NAVEGACIÓN ------->
+        <ul class="listaMenu">
+            <li><a href="#"></a>inicio</li>
+            <li><a href="#"></a>proyecto</li>
+            <li><a href="#"></a>sobre nosotros</li>
+            <li><a href="#"></a>aliados</li>
+            <li><a href="#"></a>contactanos</li>
+        </ul>
+    </nav>
+
+    <!-------------------------- MAIN (contenido página web)-------------------------->
+
+    <main>
+        <!------- SECTION DEL CONTENIDO PRINCIPAL------->
+        <section class="contenedorPrincipal">
+            <h1>Proyecto: Tomemos Conciencia</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consectetur.</p>
+            <!-- article (contenedor para elementos que se relacionan entre sí) -->
+            <article class="contenedorImagenes">
+                <div class="imagenes img1">
+                    <img src="./assets/img1.png" alt="img-proyecto">
+                    <div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis magni optio ut eaque
+                            perferendis, numquam porro quidem nemo, rerum a labore velit veritatis tempore provident
+                            voluptate doloribus voluptatibus impedit!</p>
+                    </div>
+                </div>
+                <div class="imagenes img2">
+                    <img src="./assets/img2.png" alt="img-proyecto">
+                    <div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis magni optio ut eaque
+                            perferendis, numquam porro quidem nemo, rerum a labore velit veritatis tempore provident
+                            voluptate doloribus voluptatibus impedit!</p>
+                    </div>
+                </div>
+                <div class="imagenes img3">
+                    <img src="./assets/img3.png" alt="img-proyecto">
+                    <div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis magni optio ut eaque
+                            perferendis, numquam porro quidem nemo, rerum a labore velit veritatis tempore provident
+                            voluptate doloribus voluptatibus impedit!</p>
+                    </div>
+                </div>
+                <div class="imagenes img4">
+                    <img src="./assets/img4.png" alt="img-proyecto">
+                    <div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis magni optio ut eaque
+                            perferendis, numquam porro quidem nemo, rerum a labore velit veritatis tempore provident
+                            voluptate doloribus voluptatibus impedit!</p>
+                    </div>
+                </div>
+                <div class="imagenes img5">
+                    <img src="./assets/img7.png" alt="img-proyecto">
+                    <div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis magni optio ut eaque
+                            perferendis, numquam porro quidem nemo, rerum a labore velit veritatis tempore provident
+                            voluptate doloribus voluptatibus impedit!</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!------- SECTION DEL PRÁCTICA FLEXBOX ------->
+        <section class="contenedorFlex">
+            <div class="flex-hijo">caja1</div>
+            <div class="flex-hijo">caja2</div>
+            <div class="flex-hijo">caja3</div>
+            <div class="flex-hijo">caja4</div>
+            <div class="flex-hijo">caja4</div>
+        </section>
+    </main>
+
+    <!-------------------------- FOOTER (pie de página)-------------------------->
+    <footer>
+        <!-- CARACTERISTICA DE DESARROLLO -->
+        <p>práctica de desarrollo &copy; Robinson Ariza 2024</p>
+    </footer>
+</body>
+
+</html>

@@ -38,20 +38,154 @@ body{
 /* ---------------------------- HEADER ---------------------------- */
 
 header{
-    border: 10px solid black;
     background-color: var(--colorEnfasis3);
     width: 100%;
     height: 100px;
 }
 
 .menuNav{
-    background-color: var(--colorEnfasis3);
+    /* da dimensiones segun la clase header */
     width: 100%;
     height: 100px;
+    background-color: var(--colorEnfasis3);
+    
+    /* POSITION
+
+    Tipos de posicionamiento:
+    
+    1.position: static; -> ocupa un espacio en mi sitio web
+    2.position: fixed; -> Fija a un elemento hijo durante todo el sitio web
+    3.position: relative; 
+    4.position: absolute;
+    5.position: sticky; -> Fija al contenedor, siempre y cuando el contenedor se vea (efecto de deslizamiento)
+
+    Especifican el posicionamiento:
+
+    -top-> posiciona superiormente.
+    -bottom -> posiciona abajo.
+    -left, right -> posiciona a izquierda o drecha respectivamente.
+    */
     position: fixed;
-    top: 0%;
-    right: 0%;
+    top: 0;
+    left: 0;
+
+    /* flex (flexbox) -> modelo de diseño en css que permite modificar el posicionamiento de los elementos.
+    -flex va en el contenedor padre de los elementos hijos a modificar.
+    - La diferencia con position radica en la forma en que se posicionan los elementos, flexbox lo hace mediante filas y columnas.
+
+    Columnas o filas -> con flex-direction podemos definir la disposicion de los elementos, ya sea en columnas (column) o filas (row)
+    
+    Alineación en x e y -> el uso de uno u otro depende del felx-direction a utilizar
+    -> mediante justify-content 
+    -> mediante align-items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* el primer valor varia en y, el segundo en x */
+    padding: 0 20px;
 }
 
+.logo{
+    border: solid purple;
+    /* da dimension al contenedor segun la clase .menuNav para despues definir las dimensiones del logo */
+    height: 100%; 
+}
+
+.logo a{
+    /* da las dimensiones respecto al contenedor en la clase .logo  */
+    height: 100%;
+    /* colocamos la frase "looking for freedom" al lado del logo*/
+    display: flex;
+    /* disposicon de los elementos en fila */
+    flex-direction: row;
+    /* centramos los elementos en x */
+    justify-content: center;
+    /* centramos los elementos en y */
+    align-items: center;
+    /* gap-> sirve solamente con flex -> damos separación a los elementos */
+    gap: 20px;
+    /* quitar la linea de subrayado de la frase "looking for freedom" */
+    text-decoration: none;
+    /* cambia la tipografía */
+    font-family: var(--textContent);
+    /* cambio del color del texto */
+    color: var(--colorText);
+    /* cambio del grosor de la fuente */
+    font-weight: bold;
+    /* cambio de tamaño de la fuente */
+    font-size: 20px;
+}
+
+.p-logo{
+    /* modificamos las dimensiones del párrafo */
+    width: 150px;
+    /* otra opción sería jugar con las posiciones del parrafo con text-align: left; */
+}
+
+.span-logo{
+    color: var(--colorEnfasis1);
+}
+
+.logo img{
+    /* da las dimensiones respecto al contenedor en la clase .logo  */
+    height: 100%;
+}
+
+.listaMenu{
+    border: solid green;
+    /* colocamos los elementos uno al lado del otro */
+    display: flex;
+    flex-direction: row;
+    /* damos distancia a los elementos entre sí */
+    gap: 60px;
+    /* quitamos la estructuración de lista */
+    list-style: none;
+}
+
+.listaMenu a{
+    text-decoration: none;
+    color: var(--colorText);
+    font-family: var(--textContent);
+    font-size: 20px;
+}
+
+.listaMenu a:hover{
+    color: var(--colorEnfasis1);
+}
 /* ---------------------------- MAIN ---------------------------- */
+main{
+    width: 100%;
+    padding: 100px;
+}
+
+.contenedorPrincipal{
+    border: solid red;
+    font-family: var(--textContent);
+}
+
+.contenedorPrincipal h1{
+    font-family: var(--textTitle);
+    font-size: 40px;
+    color: var(--colorEnfasis3);
+}
+
+.contenedorImagenes{
+    border: 3px solid var(--colorEnfasis3);
+    /* modificamos la margen externa del conteneddor */
+    margin-top: 50px;
+    /* damos redondez a los bordes del contenedor */
+    border-radius: 30px;
+}
+
 /* ---------------------------- FOOTER ---------------------------- */
+
+footer{
+    height: 100px;
+    background-color: var(--colorEnfasis3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: var(--textContent);
+    color: var(--colorText);
+}

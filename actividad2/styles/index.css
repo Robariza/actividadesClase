@@ -84,7 +84,7 @@ header{
     /* el primer valor varia en y, el segundo en x */
     padding: 0 20px;
 
-    /* poner el contenedero por encima de todogit */
+    /* poner el contenedero por encima de todo elemento de la página */
     z-index: 100;
 }
 

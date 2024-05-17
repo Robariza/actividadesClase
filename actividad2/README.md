@@ -1,7 +1,7 @@
-## NOMBRE PROYECTO: ACTIVIDAD 2 - CONCEPTOS CSS AVANZADO - FLEXBOX - GRID
+## NOMBRE PROYECTO: ACTIVIDAD 2 - CONCEPTOS CSS AVANZADO - POSITION - FLEXBOX - GRID
 
 ## DESCRIPCIÓN DEL PROYECTO
 
-segunda actividad de clase bootcamp 2024
+Actividad sobre conceptos y herramientas avanzadas en CSS
 
 ## AUTOR - robinson ariza

@@ -83,6 +83,9 @@ header{
     align-items: center;
     /* el primer valor varia en y, el segundo en x */
     padding: 0 20px;
+
+    /* poner el contenedero por encima de todogit */
+    z-index: 100;
 }
 
 .logo{

@@ -1,163 +1,201 @@
+<!-- 
+  html -> lenguaje de marcado de hipertexto
+  marcado -> etiquetas (apertura y cierre)
+  hipertexto -> redirección a otras páginas de html
+ -->
 <!DOCTYPE html>
-<html lang="en">
+
+<!-- 
+   lang -> lenguaje en el que está hecho nuestra página web
+  -->
+<html lang="es">
+
+<!-------------------------------------- HEAD (mente de mi página)--------------------------------------- 
+    -> Todo lo que necesitemos para que funcione nuestro sitio web, pero no se ve
+    
+ -->
 
 <head>
+    <!--------------- METADADOS --------------->
+
+    <!-- Permite que el navegador interprete caracteres especiales -->
     <meta charset="UTF-8">
+    <!-- Permite que se pueda adaptar a diferentes pantallas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Robinson Ariza">
-    <meta name="keyboard" content="libros, librerias">
+
+    <!--------------- METADATOS ENFOCADOS EN EL POSICIONAMIENTO SEO --------------->
+    <meta name="author" content="Luisa Castaño">
+    <meta name="keywords" content="Libros, librería, cuentos">
     <meta name="description" content="pagina informativa sobre libros">
-    <!-- link a los estilos    -->
+
+    <!--------------- LINK ESTILOS ---------------- 
+        LINKS -> Vinculan con mi .css, vinculan con .js
+    -->
+
+    <!-- Link de html y css -->
+    <!-- href -> donde especifico las rutas de mis estilos -->
     <link rel="stylesheet" href="./styles/index.css">
 
+    <!-- Link de mi favicon - logo en la pestaña del navegador-->
     <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon">
 
-    <!-- link a los iconos -->
+    <!-- Link a mis íconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <title>Libros</title>
+    <!---------------- NOMBRE DEL PROYECTO ---------------->
+    <title>Proyecto 1</title>
 
 </head>
 
+<!----------------------------------------- BODY (estructura del contenido de mi página) ----------------------------------------->
+
 <body>
+    <!------------------ INICIO DE ENCABEZADO ------------------>
     <header>
-        <!-- inicio del encabezado -->
+        <!-- dentro ponemos nuestro menú, o baner, o carrusel, o lo que queramos que sea nuestro encabezado -->
 
-        <!-- menú de navegación -->
+        <!------------------ MENÚ DE NAVEGACIÓN ------------------>
+
+        <!-- nav-> menú de navegación -->
         <nav class="menuNav">
-            <!-- siempre son listas 
+            <!-- TIPOS DE LISTA:
             -listas ordenadas -> ol (order list)
-            -listas desordenadas -> ul (unorden list)  
-
-            cada lista tiene  sue elemento etiqueta  -> li (list item)
-        -->
-
+            -listas desordenadas -> ul (unorder list)
+ 
+            -cada lista tiene su elemento -> etiqueta (li)
+            -->
             <!-- <ol>
-            <li>Elemento1: ordenada</li>
-            <li>Elemento2: ordenada</li>
-            <li>Elemento3: ordenada</li>
-        </ol> -->
+             <li>Elemento 1: ordenada</li>
+             <li>Elemento 2: : ordenada</li>
+             <li>Elemnto 3: : ordenada</li>
+            </ol> -->
 
-            <!-- etiqueta de separación -->
-            <hr>
-            <!-- a -> equiteta para redirecionar a un sitio web -->
-            <!-- img -> etiqueta para imagenes 
-            li -> item lista -->
+            <!-- img (etiqueta para imagenes) -->
+            <!-- a -> (etiqueta para redirecionar) -->
+
             <ul class="listaMenu">
-                <li> <a href="#">Seccion1 </a> </li>
-                <li> <a href="#">Seccion2 </a> </li>
-                <li> <a href="./index.html">
-                        <!-- src -> source -> fuente 
-                    ruta de la imagen
-                    
-                    alt -> texto descriptivo de la imagen ->
-                    texto alternativo -> influye en el seo
-                    -->
-                        <img class="logo"
-                         src="./assets/logo.jpg" alt="logo">
+                <li><a href="#">Seccion 1</a></li>
+                <li><a href="#">Seccion 2</a></li>
+                <li>
+                    <a href="./index.html">
+                        <!-- 
+                        src -> source ( ruta de la imágen) 
+                        alt -> texto descriptivo de la imagen (texto alternativo)
+                        -->
+                        <img class="logo" src="./assets/logo.jpg" alt="logo">
                     </a>
                 </li>
-                <li> <a href="#">Seccion4 </a> </li>
-                <li> <a href="#">Seccion5 </a> </li>
+                <li><a href="#">Seccion 3</a></li>
+                <li><a href="#"">Seccion 4</a></li>
             </ul>
-
         </nav>
-        <!-- seccion banner -->
-        <section class="banner">
-            <img src="./assets/banner.jpg" alt="bane-libros">
-        </section>
+
+        <!------------------ BANNER ------------------>
+        <section class=" baner">
+                        <img class="img-baner" src="./assets/banner.jpg" alt="bane-libros">
+                        </section>
     </header>
-    
-    <!-- inicio del contenido de la pagina -->
+
+    <!----------------------------------------- MAIN (contenido de la página) --------------------------------------- -->
     <main>
+        <!-- section (me divide mi sitio en temátigas generales de contenido) -->
+        <section class="seccion1">
+            <!-- NOTA
+            ETIQUETAS SEMÁNTICAS
+            Estructura del código -> SEO
+            el nombre de la etiqueta ya me indica qué contenido va a haber
+    
+            <h3> -> subtitulo
+                <li> -> item lista
+                <nav> -> menú
+                
+            ETIQUETA DIV (No semántico)
+            No semántico puede contener cualquier cosa
+            Todo lo no semántico, es para estilos
 
-        <!-- seccion informativa 1 -->
-        <section class="Seccion1">
-            <!-- section -> divide mi sitio en 
-                tematicas generales de contenido -->
-
-            <!-- etiquetas  para los titulos -> h
-
-            h1 -> el titulo principal -> solo debe haber uno 
-            h2 -> titulos de las secciones de contenido 
-            h3, h6 -> subtitulos 
-            p -> parrafos 
+            <div> -> contenedor de elementos
+            <span> -> hacer modificaciones específicas
             -->
-            <h1 class="Titulo">Titulo principal</h1>
-            <!-- lorem -> texto falso -->
-            <div class="divVideo">
-                <!-- iframe -> nos permite usar elementos como videos o mapas de otros sitios web -->
-                <!-- 
-                    las etiquetas no semanticas se usan para css
-                    etiqueta div (no semantico)-> contenedor de elementos 
-                span -> hacer modificaciones especificas
-                -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/4pCwXywTzKE?si=LTUx-I7d29X4Ygaq"
+
+            <!-- 
+             ETIQUETAS PARA LOS TÍTULOS -> h
+
+            -h1 -> Título principal (solo puede haber uno)
+            -h2 -> Títulos de nuestras secciones de contenido
+            -h3 - h6 -> subtítulos
+            -p -> párrafos
+            -lorem -> texto falso
+            -->
+            <h1 class="titulo">TITULO PRINCIPAL</h1>
+
+            <!-- iframe -> nos permiten consumir elementos como videos, mapas, imágenes, etc, de otros sitios web -->
+            <div id="div-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5ovFSHqofE?si=VTGse58lzi9gqHQf"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam deserunt facere officiis nulla. Ipsa
-                incidunt, optio facilis a blanditiis voluptatum quae pariatur voluptatibus, quisquam illo omnis
-                fugit labore veritatis nostrum?
-                Eveniet officia voluptates aspernatur aliquid. Illo, nobis excepturi tempore dicta inventore
-                molestias corporis. Sequi in, tempore necessitatibus dolores maxime sint eius aperiam ad cum,
-                temporibus ab officiis amet, quis fugiat?
-                Eos delectus quibusdam obcaecati tempore sit perferendis, neque totam odit doloremque dolores!
-                Nesciunt exercitationem nam nobis eaque, non quasi commodi officia rerum reiciendis tenetur
-                quibusdam iste ad nisi aut sequi.
-                Debitis quam dolor delectus cupiditate aliquam fugit unde mollitia, in commodi esse corrupti dicta,
-                iusto praesentium necessitatibus, saepe recusandae eius neque ex consectetur voluptates aut aliquid
-                incidunt expedita omnis! Possimus.</p>
-            </div>
 
+                <!-- lorem -> texto falso -->
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, provident cum, at aut odit
+                    inventore vitae asperiores consequatur laboriosam error officia laborum! Esse saepe facilis
+                    excepturi quis odit, ducimus accusantium.
+                    Veritatis vel velit hic iusto, deserunt aperiam doloremque minus temporibus recusandae consequuntur
+                    mollitia expedita dolorum? Cupiditate impedit esse beatae facilis culpa iste officiis odit rerum
+                    totam facere, voluptas sint praesentium.
+                    Ullam natus accusantium animi eum quidem? Ullam perferendis, saepe reprehenderit incidunt at ex
+                    exercitationem officiis illum expedita totam voluptate maiores ipsam, voluptates excepturi eligendi
+                    sapiente itaque dolorem quam maxime ducimus.
+                    Maxime assumenda labore repellendus consequuntur libero vel itaque voluptatem quas sed voluptates
+                    facere, cum iure odio quia! Perspiciatis ratione numquam, culpa, aperiam, quod nesciunt dolorem
+                    tempore officia quasi quaerat illo.
+                </p>
         </section>
 
-        <!-- seccion informativa2 -->
+        <section class="seccion2">
+            <h2 class="titulo">El título de mi sección</h2>
 
-        <section class="Seccion2">
-            <h2 class="Titulo">el titulo de mi seccion</h2>
-
-            <div class="contenedorImg">
-                <img src="./assets/img.jpg" alt="">
-                <img src="./assets/img.jpg" alt="">
-                <img src="./assets/img.jpg" alt="">
-                <img src="./assets/img.jpg" alt="">
-                <img src="./assets/img.jpg" alt="">
-                <img src="./assets/img.jpg" alt="">
+            <div class="contenedor-img">
+                <img class="img" src="./assets/img.jpg" alt="imagen-Libros">
+                <img class="img" src="./assets/img.jpg" alt="imagen-Libros">
+                <img class="img" src="./assets/img.jpg" alt="imagen-Libros">
+                <img src="./assets/img.jpg" alt="imagen-Libros">
+                <img src="./assets/img.jpg" alt="imagen-Libros">
+                <img src="./assets/img.jpg" alt="imagen-Libros">
             </div>
         </section>
     </main>
 
+    <!----------------------------------------- FOOTER (pie de página) --------------------------------------- -->
     <footer>
-        <!-- inicio del pie de pagina -->
-        <!-- division de contenido -->
+        <!-- división de contenido contáctenos -->
         <div>
-            <h3>contactos</h3>
+            <h3>Cotáctame</h3>
             <ol>
-                <li>telefono</li>
-                <li>red social</li>
-                <li>correo </li>
+                <li>333 333 3333 </li>
+                <li>Correo.empresa@mail.com</li>
+                <li>@cuentaemp</li>
             </ol>
         </div>
-        <!-- division de logo -->
+        <!-- división de contenido logo -->
         <div>
-            <img src="./assets/logo.jpg" alt="logo">
+            <img class="logo-2" src="./assets/logo.jpg" alt="logo">
         </div>
 
-        <!-- division de redes sociales -->
+        <!-- división redes sociales -->
+        <!-- article -> también es un contenedor, pero de elementos que se realcionan entre sí -->
         <article>
-            <h3>redes sociales</h3>
-            <div>
-                <!-- librerias ->
-                i -> etiqueta de icono para html
-                -->
-                <a href="https://www.facebook.com/?locale=es_LA"> <i class="bi bi-facebook"></i> </a>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-whatsapp"></i>
+            <h3>Redes sociales</h3>
+
+            <div class="redesSociales">
+                <!-- la etiqueta i -> ÍCONOS -->
+                <a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="bi bi-facebook clase2"></i></a>
+
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
             </div>
         </article>
-
     </footer>
 </body>
 

@@ -1,4 +1,4 @@
-/* comentario en css */ 
+/* comentario en css */
 
 /* Guía para css
 
@@ -38,74 +38,62 @@
     pseudoelementos -> ::"texto"
 */
 
-/* pseudoclase que me hace referencia a todo mi html -> root (código raíz) */
-
-:root{
-    /* con -- se definen variables */
-    --tipografía: "Poetsen One", sans-serif;
-    --colorFondo:#E2DED7;
-    --colorClaro:#108BB2;
-    --colorTexto:#063A4C;
-    --colorContraste:#EE466F;
+/* pseudoclase que me hace referencia a todo mi html root -> codíco raíz */
+:root {
+    --tipografia: 'Zilla Slab', sans-serif;
+    --colorFondo: #E2DED7;
+    --colorClaro: #108BB2;
+    --colorTexto: #063A4C;
+    --colorContraste: #EE466F;
 }
 
-/* condiciones iniciales */
 
-/* Los estilos que quiero en mi sitio web */
+/* Condiciones iniciales */
+/* Los estilos que quiero en TODO MI SITIO WEB */
 
-/* *-> selector universal -> aplica estilo a todos los elementos */
 
-*{
-    /* margin -margen externo */
+/* *-> selector universal -> me aplica los estilos a TODO */
+* {
+    /* margin ->margen externo */
     margin: 0;
- 
     /* padding -> margen interno */
     padding: 0;
 }
 
-body{
-
-    /* ancho de la pantalla */
+/*----------------------------------------- BODY -----------------------------------------*/
+body {
+    /* Ancho del tamaño de mi pantalla */
     width: 100%;
 
-    /*  */
     /* background-color -> color de fondo */
     background-color: var(--colorFondo);
- 
     /* tipografía */
-    font-family: var(--tipografía);
- 
-    /* color de letra */
+    font-family: var(--tipografia);
+    /* color de la letra */
     color: var(--colorTexto);
- 
-    /* quitar scroll horizontal 
-        overflow-> si sobresale el contenido
+    /* Quitar el scroll horizontal 
+        overflow -> si se sobresale el contenido
         hidden -> esconder
     */
     overflow-x: hidden;
- 
-    /* Ajuste de dimensiones */
+    /* ajuste a mis dimensiones */
     box-sizing: border-box;
 }
 
 
-/* -----------Header------------ */
+/*----------------------------------------- HEADER -----------------------------------------*/
 
-/* contenedor mayor (padre), todo lo que esta contenido en el header son partes (hijos) */
-
-/* contenedor padre -> determinar dimensiones */
-
-header{
-   
-    
-    /* width -> ancho
-        height -> alto 
-        vw -> ancho de pantalla
+/* contenedor padre -> determinen dimensiones */
+header {
+    /* ancho */
+    /* vw -> ancho de pantalla
         vh -> alto de pantalla
     */
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
 }
+
+/* Lo que está dentro del header son hijos */
 
 .menuNav {
     background-color: var(--colorClaro);
@@ -113,127 +101,154 @@ header{
     height: 100px;
 }
 
+/*------------------------- NAV -------------------------*/
 .listaMenu {
     height: 100%;
-    
-
-    /* disposicion flexible -> elementos uno al lado del otro */
+    /* disposición flexible -> los elementos uno al lado del otro */
     display: flex;
-
     /* centrar */
-    /* centrar en x */
+    /* centra an x */
     justify-content: center;
-    
     /* centrar en y */
     align-items: center;
-    
-    /* separaciones entre elementos hijos */
+    /* separeciones entre elementos hijos */
     gap: 50px;
-
     /* quitar viñetas de lista */
     list-style: none;
-
-    /*  */
 }
 
-.listaMenu a{
-    /* quitar decoración de texto */
+.listaMenu a {
+    /* quitar la decoración del texto */
     text-decoration: none;
-
-    /* color de letra */
+    /* color del texto */
     color: var(--colorTexto);
-
     /* tamaño de texto */
     font-size: 18px;
-
-    /* grosor de letra */
+    /* más ancha la letra -> negrilla */
     font-weight: bold;
 }
 
-.listaMenu a:hover{
+.listaMenu a:hover {
     color: white;
 }
 
-.logo{
+.logo {
+    /* ancho */
     width: 50px;
+    /* alto */
     height: 50px;
 }
 
-/* banner */
 
-.banner{
-    
-    height: 85%;
+/*------------------------- BANNER ------------------------*/
+/* contenedor padre de la imagen */
+.baner {
     width: 100%;
+    height: 80%;
 }
 
-.banner img{
+/* mi imagen ocupa todo el espacio de su padre */
+.baner img {
     width: 100%;
     height: 100%;
+    /* manipular la img */
+    object-fit: fill;
 }
-/* -----------Main-------------- */
 
-.main{
-    border: 5px solid red;
+/*----------------------------------------- MAIN -----------------------------------------*/
+main {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* dispongan una debajo de otra */
+    /* dispongan una debajo de la otra */
     flex-direction: column;
 }
 
-/* seccion 1 */
-
-.Seccion1{
-    border: 5px solid blue;
+.seccion1 {
     width: 80%;
 }
 
-.divVideo{
+#div-video {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.divVideo iframe{
+#div-video iframe {
     width: 50%;
 }
 
-.divVideo p{
+#div-video p {
     width: 50%;
 }
 
-.Seccion2{
-    border: 5px solid green;
+.seccion2 {
     width: 80%;
 }
 
-.contenedorImg{
-    
+.contenedor-img {
+
     /* organizar en filas y columnas */
     display: grid;
     /* filas */
+    /* 1fr -> me ocupe una fracción del espacio */
     grid-template-rows: 1fr 1fr;
-    /* columnas */
+
+    /* Columnas  */
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
 
-.contenedorImg img{
+.contenedor-img img {
     width: 100%;
+    height: 100%;
 }
 
-.Titulo{
+.titulo {
     /* centrar texto */
     text-align: center;
-    /* textos en mayuscula */
+    /* textos en mayúscula */
     text-transform: uppercase;
-    /* margen */
+    /* margen arriba y abajo - derecha e izquierda */
     margin: 20px 0px;
 }
 
+/*----------------------------------------- FOOTER -----------------------------------------*/
 
-/* -----------footer------------ */
+/* contenedor padre */
+footer {
+    /* dimensiones */
+    width: 100%;
+    height: auto;
+    /* aspectos generales */
+    background-color: var(--colorClaro);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    color: white;
+}
+
+.logo-2 {
+    width: 100px;
+    height: 100px;
+}
+
+/* Los íconos en css y html, se toman como si fueran texto */
+.redesSociales {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+i {
+    margin: 15px;
+    color: white;
+}

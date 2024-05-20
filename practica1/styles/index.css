@@ -36,81 +36,77 @@ body {
 header {
     background-color: var(--colorEnfasis3);
     width: 100%;
-    height: 570px;
+    height: auto;
 }
-
+/*---------------- MENÚ NAVEGACIÓN -----------------*/
 .menuNav {
     width: 100%;
-    height: 90px;
+    height: 150px;
     background-color: var(--colorEnfasis2);
+   
+    font-family: var(--textTitle);
+    font-weight: bold;
 
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 100px;
+
+    z-index: 1000px;
 }
 
-.logo {
-    height: 100%;
+.contenedorLogo{
+    width: 20%;
+    height: 80%;
+}
+
+.contenedorLogo a{
     display: flex;
     justify-content: left;
-}
-
-.logo a {
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-
-    gap: 20px;
-    text-decoration: none;
-
-    font-family: var(--textTitle);
-    color: var(--colorText);
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.logo img {
-    height: 100%;
-}
-
-.logo p {
-    height: 100%;
-    display: flex;
     align-items: center;
+
+    text-decoration: none;
 }
 
-.span-logo {
-    color: var(--colorEnfasis1);
+.contenedorLogo img{
+    width: 120px;
+    height: 120px;
 }
 
-.listaMenu {
+.contenedorLogo p{
     width: 100%;
-    height: 50%;
-    background-color: #002B5B;
+    height: 100%;
+    font-size: 35px;
+    color: var(--colorText);
+}
+
+.span-logo{
+    color: var(--colorEnfasis1);
+}
+
+.listaMenu{
+    width: 100%;
+    height: 20%;
+    background-color: var(--colorText);
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
 
-    text-decoration: none;
+    font-size: 25px;
     color: var(--colorEnfasis1);
-    font-family: var(--textTitle);
-    font-size: 20px;
-    list-style: none;
-}
 
-.listaMenu :hover {
-    color: var(--color)
+    list-style: none;
+    gap: 50px;
 }
 
 .banner{
     width: 100%;
-    height: 570px;
-    margin-top: 160px;
+    height: 100%;
+    margin-top: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner img{
@@ -121,6 +117,7 @@ header {
 
 main{
     width: 100%;
+    height: 100%;
 }
 
 h1{
@@ -138,23 +135,24 @@ h1{
     height: 100%;
     border: solid 2px var(--colorEnfasis2);
     border-radius: 10px;
-    font-family: var(--textContent);
-
     overflow: hidden;
+
+    font-size: 18px;
+    font-family: var(--textContent);
 
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
 }
 
-.grid img{
-    width: 100%;
-    height: 100%;
-}
-
 .imagenes{
     display: grid;
     position: relative;
+}
+
+.grid img{
+    width: 100%;
+    height: 100%;
 }
 
 .img1{
@@ -252,6 +250,7 @@ h1{
 .infoParrafo p{
     font-size: 20px;
     text-align: left;
+    color: var(--colorText);
 }
 
 /* ---------------------------- FOOTER ---------------------------- */

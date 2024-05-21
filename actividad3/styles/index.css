@@ -1,0 +1,109 @@
+/* IMPORTACIONES */
+
+/* VARIABLES */
+:root{
+    --colorClaro: lightsalmon;
+    --colorFondo: beige;
+    --colorEnfasis: rgb(40, 124, 124);
+    --tipografia: 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+/* CONDICIONES INICIALES */
+*{
+    /* padding-> borde interno -> garantiza iniciar con las dimensiones de padding en los elementos */
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    background-color: var(--colorFondo);
+    font-family: var(--tipografia);
+    font-size: 25px;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header{
+    border: solid 5px red;
+    /* vw-> viewport width (ancho de cualquier pantalla en porcentaje)*/
+    width: 100vw; 
+    /* vh-> viewport height (altura de cualquier pantalla en porcentaje)*/
+    height: 100vh;
+}
+
+.titulo{
+    width: 100%;
+    height: 150px;
+
+    background-color: var(--colorEnfasis);
+    /* otra forma de centrado para el contenido */
+    display: grid;
+    /* alinea los elementos tanto en x e y */
+    place-content: center;
+    color: var(--colorClaro);
+}
+
+/* carrusel de imágenes (contenedor general) */
+.contenedorSlider{
+    border: solid 3px var(--colorEnfasis);
+    width: 800px;
+    height: 500px;
+    /* CENTRAR CONTENEDORES -> 100px margin top y bottom, auto centra horizontalmente */
+    margin: 100px auto;
+    overflow-x: scroll;
+}
+
+/* contenedor directo -> especifico como se debe mover */
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* nombre que se conecta con el keyframe */
+    animation-name: slider;
+    /* tiempo de duración */
+    animation-duration: 10s;
+    /* cuantas veces se repite la animación */
+    animation-iteration-count: infinite;
+    /* tipo de transición del movimiento */
+    animation-timing-function: linear;
+    /* dirección de la animación */
+    animation-direction: alternate-reverse;
+}
+
+/* keyframe-> establecemos la ruta de la animación 
+
+0% -> 50% -> 100%
+from -> to*/
+
+@keyframes slider {
+    from{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-190%);
+    }
+    to{
+        transform: translateX(-380%);
+    }
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer{
+    height: 150px;
+    width: 100%;
+
+    background-color: var(--colorEnfasis);
+    /* otra forma de centrado para el contenido */
+    display: grid;
+    /* alinea los elementos tanto en x e y */
+    place-content: center;
+    color: var(--colorFondo);
+}

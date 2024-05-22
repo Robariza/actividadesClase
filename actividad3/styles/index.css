@@ -45,54 +45,134 @@ header{
     color: var(--colorClaro);
 }
 
-/* carrusel de imágenes (contenedor general) */
-.contenedorSlider{
-    border: solid 3px var(--colorEnfasis);
-    width: 800px;
-    height: 500px;
-    /* CENTRAR CONTENEDORES -> 100px margin top y bottom, auto centra horizontalmente */
-    margin: 100px auto;
-    overflow-x: scroll;
+.titulo:active{
+    background-color: brown;
+    color: chartreuse;
+    transform: scale(1.2);
 }
 
-/* contenedor directo -> especifico como se debe mover */
+
+/* mi carrusel de imágenes */
+/* contenedor general - es como un marco que me define qué se ve y qué no se ve */
+.contenedor-slider{
+    border: solid 5px var(--colorEnfasis);
+
+    /* 
+        Para responsive, no usar valores fijos como PX, Sino valores relativos, como % y vw -vh
+    */
+    width: 75%;
+    height: 65vh;
+    /* width: 70%;
+    height: 65vh; */
+    /* margin: auto -> centrar contenedores */
+    margin: 100px auto;
+    overflow-x: hidden;
+}
+
+/* contenedor directo, le especifico cómo se debe mover */
 .slider{
     width: 100%;
     height: 100%;
     display: flex;
     /* nombre que se conecta con el keyframe */
-    animation-name: slider;
-    /* tiempo de duración */
+    animation-name: deslizar;
+     /*tiempo de duración  */
     animation-duration: 10s;
-    /* cuantas veces se repite la animación */
+    /* cuantas veces queremos que se repita la animación */
     animation-iteration-count: infinite;
-    /* tipo de transición del movimiento */
-    animation-timing-function: linear;
-    /* dirección de la animación */
-    animation-direction: alternate-reverse;
+    /* forma en que queremos que se de el movimiento */
+    animation-timing-function: ease-in-out;
+    /* dirección de mi animación */
+    animation-direction: alternate;
 }
 
-/* keyframe-> establecemos la ruta de la animación 
+/* Vamos a poner a funcionar la animación */
+/* 0% -> 50% -> 100%
+    from -> to */
 
-0% -> 50% -> 100%
-from -> to*/
-
-@keyframes slider {
+@keyframes deslizar {
     from{
         transform: translateX(0%);
+        /* transform: scale(0.5); */
     }
     50%{
-        transform: translateX(-190%);
+        transform: translateX(-150%);
+        
     }
     to{
-        transform: translateX(-380%);
+        transform: translateX(-300%);
+        /* transform: scale(1.2); */
     }
 }
 
-.slider img{
-    width: 100%;
+/* @keyframes rotar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+} */
+
+/* @keyframes escala {
+    
+    from{
+        transform: scale(0.4);
+    }
+    50%{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.7);
+    }
+} */
+
+.contenedor-slider img{
+    /*  */
+    /* flex: 1 0 100%; */
     height: 100%;
-    object-fit: cover;
+    width: 100%;
+    
+}
+
+/* -------------MAIN------- */
+
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+.contenido{
+    border: solid 5px var(--colorEnfasis);
+    width: 75%;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.tituloSecundario{
+    text-align: center;
+    padding: 25px;
+}
+.imgParrafo{
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Yo puedo llamar varios elementos de mi html, a los que les voy a aplicar los mismos estilod, sólo separándolos por , */
+/* .imgParrafo img, 
+.imgParrafo p {
+    width: 50%;
+    height: 100%;
+} */
+
+.imgParrafo img{
+    width: 50%;
+}
+
+.imgParrafo p{
+    width: 50%;
 }
 
 /* FOOTER */

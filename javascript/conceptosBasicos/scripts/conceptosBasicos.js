@@ -134,8 +134,8 @@ let suma = () => {
 }
 
 // 4. FUNCIONES INCORPORADAS
+
     /*
-    
         alert -> enviarle un mensaje al usuario
         prompt -> es para pedir datos al usuario
         parseInt -> convertir un dato a entero
